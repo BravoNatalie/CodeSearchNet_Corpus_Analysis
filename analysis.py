@@ -9,7 +9,9 @@ from spacy.lang.en.stop_words import STOP_WORDS
 docstring_tokens = ['Extracts', 'video', 'ID', 'from', 'URL', '.']
 docstring = 'Extracts video ID from URL, over running run ran PALAVRA.'
 
-arquivoEntrada = "teste.txt"
+
+#Define os arquivos de leitura
+arquivoEntrada = ["teste1.txt", "teste2.txt"]
 parsed_json = []
 
 #Definindo a linguagem de normalização
@@ -49,9 +51,10 @@ def processaTokens(docstring, tokens_proc):
             tokens_proc.append(tk)
 
 def parseJson(arquivoEntrada, parsed_json):
-    with open(arquivoEntrada) as f:
-        for line in f:
-            parsed_json.append(json.loads(line))
+    for arq in arquivoEntrada:
+        with open(arq) as f:
+            for line in f:
+                parsed_json.append(json.loads(line))
 
 
 
