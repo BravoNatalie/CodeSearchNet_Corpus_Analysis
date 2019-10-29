@@ -9,6 +9,8 @@ from spacy.lang.en.stop_words import STOP_WORDS
 docstring_tokens = ['Extracts', 'video', 'ID', 'from', 'URL', '.']
 docstring = 'Extracts video ID from URL, over running run ran PALAVRA.'
 
+arquivoEntrada = "teste.txt"
+parsed_json = []
 
 #Definindo a linguagem de normalização
 # stemmer = SnowballStemmer('english')
@@ -36,20 +38,31 @@ def norma(text):
     return texto
 
 #Remove stopwords, pontuação, normaliza verbos e remove duplicatas
-def processaTokens(docstring):
-    tokens = nlp(docstring)
-    output = []
+def processaTokens(docstring, tokens_proc):
+    docst = ''
+    for entry in docstring:
+        docst = docst + ' ' + entry
+    tokens = nlp(docst)
     for token in tokens:
         tk = token.lemma_
-        if token.is_stop==False and token.pos_ != 'PUNCT' and tk not in output:
-            output.append(tk)
-    return output
+        if len(token) > 1 and token.is_stop==False and token.pos_ != 'PUNCT' and tk not in tokens_proc:
+            tokens_proc.append(tk)
+
+def parseJson(arquivoEntrada, parsed_json):
+    with open(arquivoEntrada) as f:
+        for line in f:
+            parsed_json.append(json.loads(line))
 
 
 
 #norma(docstring)
-print(docstring)
-tokens_proc = processaTokens(docstring)
+
+parseJson(arquivoEntrada, parsed_json)
+docstring2 = []
+for obj in parsed_json:
+    processaTokens(obj["docstring_tokens"], tokens_proc)
+
 print(tokens_proc)
+
 
 
