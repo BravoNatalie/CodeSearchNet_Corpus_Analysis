@@ -1,4 +1,5 @@
-862 Math ML Web Graph Network DB
+862 Math ML Web Graph Network DB // Mat IA Web BD CG Redes EngS SO Generico Remover
+
 abundance 
 otu 
 function 
@@ -6,10 +7,10 @@ format
 user 
 datum 
 relative_abundance 
-root 
+root SO
 element 
 lookup 
-file 
+file SO
 mann 
 whitney 
 test 
@@ -21,7 +22,7 @@ dictionary
 diversity 
 method 
 option 
-command 
+command SO
 line 
 recv_msg 
 region 
@@ -36,7 +37,7 @@ onstart
 parameter 
 property 
 indexparameter 
-tunnel 
+tunnel Network
 path 
 record 
 eventrecord 
@@ -103,8 +104,8 @@ fv
 ndarray 
 shape 
 mxn 
-image 
-pixel 
+image CG
+pixel CG
 unique_cls 
 clase 
 fv_selection 
@@ -129,7 +130,7 @@ registers
 enhance 
 item 
 key 
-environment 
+environment SO
 variable 
 john 
 sets 
@@ -181,17 +182,17 @@ vert
 node 
 assumption 
 modified 
-coordinate 
+coordinate Math
 order 
 iterator 
 timeserie 
 modify 
 baseline 
 argument 
-canvas 
+canvas CG
 text 
 tip 
-orientation 
+orientation CG
 fixed_order 
 tip_labels_align 
 prefix 
@@ -234,7 +235,7 @@ description
 signal 
 obex 
 transfer 
-view 
+view CG
 context 
 instance 
 flask 
@@ -252,19 +253,19 @@ gitlab
 exception 
 gitclienterror 
 initializes 
-hardware 
+hardware SO
 dut 
 dutprocess 
 dutconsole 
-maplayer 
-mapsource 
+maplayer CG
+mapsource CG
 mobac 
 saml 
 ticket 
 info 
 cas 
 false 
-proxy 
+proxy Network
 exploration 
 summary 
 definition 
@@ -311,7 +312,7 @@ event
 evaluate 
 reference 
 transmit 
-encode 
+encode Math
 eigenvalue 
 nodes 
 callback 
@@ -322,7 +323,7 @@ rboro
 entry 
 anrmnow 
 kind 
-pdu 
+pdu Network
 requeue 
 limit 
 post 
@@ -341,7 +342,7 @@ fragment
 hotel 
 reservation 
 content 
-directory 
+directory SO
 xpath 
 container 
 usage 
@@ -380,7 +381,7 @@ save_dir
 language 
 lang 
 result 
-panda 
+panda Math
 dataframe 
 business 
 detail 
@@ -409,7 +410,7 @@ supporting
 template_name 
 ordering 
 s3 
-armbian 
+armbian SO
 release 
 deal 
 segment 
@@ -429,14 +430,14 @@ unit
 override_setting 
 drf 
 byte 
-oserror 
-device 
+oserror SO
+device SO
 component 
-grid 
+grid CG
 segwit 
 syntax 
 programming 
-phone 
+phone SO
 gift 
 card 
 adjustment 
@@ -444,7 +445,7 @@ rename
 copy 
 src 
 table_dict 
-processor 
+processor SO
 openstack 
 dashboard 
 functionality 
@@ -473,7 +474,7 @@ sigterm
 work 
 sigkill 
 timeout 
-thread 
+thread SO
 doesn 
 thing 
 ui 
@@ -482,7 +483,7 @@ fun
 ction 
 adjustment_factor 
 case 
-circle 
+circle CG
 ab 
 l_2 
 norm 
@@ -503,12 +504,12 @@ attachment
 note 
 style 
 backword 
-compatibility 
+compatibility SO
 program 
 contextmanager 
 action 
 cli 
-translation 
+translation CG
 response 
 data 
 raise_exception 
@@ -608,7 +609,7 @@ loss
 fetchrequest 
 validation 
 intention 
-|imagepart| 
+|imagepart| CG
 partname 
 docx 
 partfactory 
@@ -655,7 +656,7 @@ latent
 xnew 
 multiple 
 mac 
-openthread 
+openthread SO
 instrument 
 qtpylib 
 fetch 
@@ -685,7 +686,7 @@ acquire
 lock 
 dvc 
 window 
-pixels 
+pixels CG
 bottleneck 
 distortion 
 approval 
@@ -697,7 +698,7 @@ discovery
 credential 
 notimplementederror 
 wrapper 
-wav 
+wav CG
 term 
 elasticsearch 
 guide 
@@ -707,7 +708,7 @@ datasetnewrequest
 textcnn 
 sentiment 
 vim 
-vm 
+vm SO
 virtualdevicespec 
 controller 
 percentage Math
