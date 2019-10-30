@@ -11,7 +11,7 @@ docstring = 'Extracts video ID from URL, over running run ran PALAVRA.'
 
 
 #Define os arquivos de leitura
-arquivoEntrada = ["teste1.txt", "teste2.txt"]
+arquivoEntrada = ["selecionados.txt"]
 parsed_json = []
 
 #Definindo a linguagem de normalização
@@ -20,7 +20,7 @@ parsed_json = []
 nlp = spacy.load('en_core_web_sm')
 
 #adiciona stopwords customizadas
-customSW = ['over', 'id', 'palavra']
+customSW = ['id']
 for token in customSW:
     STOP_WORDS.add(token)
 
@@ -47,7 +47,8 @@ def processaTokens(docstring, tokens_proc):
     tokens = nlp(docst)
     for token in tokens:
         tk = token.lemma_
-        if len(token) > 1 and token.is_stop==False and token.pos_ != 'PUNCT' and tk not in tokens_proc:
+        tk = tk.lower()
+        if len(token) > 1 and token.is_stop==False and token.is_ascii and (token.pos_ == 'PROPN' or token.pos_ == 'NOUN') and tk not in tokens_proc:
             tokens_proc.append(tk)
 
 def parseJson(arquivoEntrada, parsed_json):
@@ -55,7 +56,14 @@ def parseJson(arquivoEntrada, parsed_json):
         with open(arq) as f:
             for line in f:
                 parsed_json.append(json.loads(line))
+            f.close()
 
+def escreverTokensEmArquivo(arquivoSaida, tokens):
+    with open(arquivoSaida, 'w+') as o:
+        o.write(str(len(tokens)) + '\n')
+        for token in tokens:
+            o.write(token + '\n')
+        o.close()
 
 
 #norma(docstring)
@@ -65,7 +73,11 @@ docstring2 = []
 for obj in parsed_json:
     processaTokens(obj["docstring_tokens"], tokens_proc)
 
-print(tokens_proc)
+#print(tokens_proc)
+#print(len(tokens_proc))
+escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
+
+
 
 
 
