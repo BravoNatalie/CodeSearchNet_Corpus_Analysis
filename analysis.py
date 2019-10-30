@@ -30,6 +30,7 @@ nlp.add_pipe(sbd, first=True)
 
 tokens_proc = []
 
+
 #Função de normalização
 def norma(text):
     text = nlp(text.lower())        
@@ -75,6 +76,7 @@ def lerTokensDeArquivo(arqEntrada):
 
 def splitLinhas(linhas):
     token_set = {}
+    linha0 = str(linhas[0])
     split = linhas[0].split()
     qtdTokens = int(split[0])
     token_set['sc'] = []
@@ -87,10 +89,11 @@ def splitLinhas(linhas):
             token_set[split[1]].append(split[0])
         else:
             token_set['sc'].append(split[0])
-    return token_set
+    return linha0, token_set
     
 def writeMapAsLinestoFile(arquivoSaida, map):
     with open(arquivoSaida, 'w+') as o:
+        o.write(linha0 + '\n')
         for k,v in map.items():
             if(str(k) == 'sc'):
                 key = ''
@@ -117,8 +120,8 @@ def writeMapAsJsonToFile(arquivoSaida, map):
 #print(len(tokens_proc))
 #escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
 
-linhas = lerTokensDeArquivo("tokens_processados.txt")
-token_map = splitLinhas(linhas)
+linhas = lerTokensDeArquivo("tokens.txt")
+linha0, token_map = splitLinhas(linhas)
 writeMapAsLinestoFile("tokens.txt", token_map)
 #writeMapAsJsonToFile("tokens.json", token_map)
 
