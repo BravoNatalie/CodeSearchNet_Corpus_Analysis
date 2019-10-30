@@ -65,17 +65,64 @@ def escreverTokensEmArquivo(arquivoSaida, tokens):
             o.write(token + '\n')
         o.close()
 
+def lerTokensDeArquivo(arqEntrada):
+    linhas = []
+    with open(arqEntrada) as f:
+        for line in f:
+            linhas.append(line.strip('\n'))
+    f.close()
+    return linhas
+
+def splitLinhas(linhas):
+    token_set = {}
+    split = linhas[0].split()
+    qtdTokens = int(split[0])
+    token_set['sc'] = []
+    for x in range(1, len(split)):
+        token_set[split[x]] = []
+        print(split[x])
+    for x in range(1, len(linhas)):
+        split = linhas[x].split()
+        if(len(split) > 1):
+            token_set[split[1]].append(split[0])
+        else:
+            token_set['sc'].append(split[0])
+    return token_set
+    
+def writeMapAsLinestoFile(arquivoSaida, map):
+    with open(arquivoSaida, 'w+') as o:
+        for k,v in map.items():
+            if(str(k) == 'sc'):
+                key = ''
+            else:
+                key = str(k)
+            for entry in v:
+                o.write(str(entry) + ' ' + key + '\n')
+        o.close()
+
+def writeMapAsJsonToFile(arquivoSaida, map):
+     with open(arquivoSaida, 'w+') as o:
+         o.write(json.dumps(map))
+         o.close()
+
 
 #norma(docstring)
 
-parseJson(arquivoEntrada, parsed_json)
-docstring2 = []
-for obj in parsed_json:
-    processaTokens(obj["docstring_tokens"], tokens_proc)
+#parseJson(arquivoEntrada, parsed_json)
+#docstring2 = []
+#for obj in parsed_json:
+#    processaTokens(obj["docstring_tokens"], tokens_proc)
 
 #print(tokens_proc)
 #print(len(tokens_proc))
-escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
+#escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
+
+linhas = lerTokensDeArquivo("tokens_processados.txt")
+token_map = splitLinhas(linhas)
+writeMapAsLinestoFile("tokens.txt", token_map)
+#writeMapAsJsonToFile("tokens.json", token_map)
+
+
 
 
 

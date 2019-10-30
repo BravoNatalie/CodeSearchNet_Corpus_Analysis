@@ -1,20 +1,20 @@
-862
+862 Math ML Web
 abundance
-percentage
-number
-sequence
+percentage Math
+number Math
+sequence Math
 otu
-sampleid
+sampleid ML
 function
-calculation
-sample
+calculation Math
+sample ML
 format
 user
-transformation
-proportion
+transformation Math
+proportion Math
 datum
 relative_abundance
-variance
+variance Math
 root
 element
 lookup
@@ -27,7 +27,7 @@ size
 kruskal
 wallis
 rule
-measurement
+measurement Math
 dictionary
 diversity
 method
@@ -108,9 +108,9 @@ builiding
 suffix
 return
 unicode
-axis
+axis Math
 step
-variant
+variant Math
 maximum
 param
 int
@@ -138,11 +138,11 @@ gutter
 client
 registry
 access
-mod
+mod Math
 operator
 point
 error
-mocks
+mocks Web
 importpuppetclasses
 force
 reload
@@ -150,24 +150,24 @@ puppet
 template
 model
 registers
-layout
-admin
-site
+layout Web
+admin Web
+site Web
 enhance
 item
-api
+api Web
 key
 environment
 variable
 end_point
-http
+http Web
 endpoint
 john
 sets
 myparam
 myval
-access_token
-json
+access_token Web
+json Web
 keyid
 url
 checkandcreate
@@ -176,13 +176,13 @@ removedomain
 domain
 mark
 callable
-service
+service Web
 payload
 output
 example
 interface
 way
-dataset
+dataset ML
 commah
 transformer
 form
@@ -207,7 +207,7 @@ processing
 tag
 config
 pusher
-statistic
+statistic Math
 remote
 local
 enables
@@ -223,25 +223,25 @@ edge
 vert
 node
 assumption
-reorient_coordinate
+reorient_coordinate Math
 modified
 coordinate
 order
 iterator
 timeserie
 modify
-coord
+coord Math
 baseline
 argument
 canvas
-plot
+plot Math
 text
 tip
-correction
+correction ML
 orientation
 fixed_order
 multitree
-plotting
+plotting Math
 tip_labels_align
 prefix
 thumbnail
@@ -289,18 +289,18 @@ description
 signal
 obex
 transfer
-session
+session Web
 view
-password
-html
-request
-hashing
+password Web
+html Web
+request Web
+hashing Math
 context
 instance
 flask
-login
-loginmanager
-github
+login Web
+loginmanager Web
+github Web
 build
 commit
 state
@@ -325,9 +325,9 @@ mobac
 saml
 ticket
 info
-logout
+logout Web
 cas
-server
+server Web
 false
 proxy
 exploration
@@ -339,20 +339,20 @@ init
 unique_name
 addition
 column
-hash
+hash Math
 signature
 schnorr
 tab
 directive
 header
-operation
+operation Math
 line_env
 line_label
 envs
 label
 returns
-sum
-rate
+sum Math
+rate Math
 length
 transition
 arr
@@ -363,7 +363,7 @@ max_sum
 space
 markov
 chain
-decision
+decision ML
 2d
 min_range
 parameters
@@ -377,9 +377,9 @@ reach
 generate
 rapid
 qout
-area
-meter
-polygon
+area Math
+meter Math
+polygon Math
 offset
 time
 event
@@ -394,7 +394,7 @@ network
 callback
 adapter
 port
-mail
+mail Web
 input
 self
 agentcount
@@ -453,7 +453,7 @@ mapping
 channel
 power
 correlation
-coefficient
+coefficient Math
 significance
 level
 consumer
@@ -467,7 +467,7 @@ panda
 dataframe
 business
 detail
-www
+www Web
 yelp
 com
 developer
@@ -483,10 +483,10 @@ map
 id
 extension
 nifti
-conversion
+conversion Math
 logger
 handler
-distance
+distance Math
 degree
 custom
 urljoin
@@ -504,11 +504,11 @@ segment
 logic
 imts
 intensity
-measure
+measure Math
 corr
 caller
 scatter
-convert
+convert Math
 requires
 highlight
 muti_row
@@ -522,13 +522,13 @@ byte
 address
 oserror
 device
-velocity
+velocity Math
 component
 grid
-latitude
-longitude
+latitude Math
+longitude Math
 segwit
-estimator
+estimator ML
 syntax
 programming
 phone
@@ -546,10 +546,10 @@ functionality
 x509
 descriptor
 sign
-encryption
+encryption Math
 metadata
 cert
-encrypt
+encrypt Math
 mapper
 spelling
 engine
@@ -571,7 +571,7 @@ sigterm
 work
 sigkill
 timeout
-second
+second Math
 thread
 doesn
 thing
@@ -580,14 +580,14 @@ graphqlschema
 selects
 fun
 ction
-series
+series Math
 adjustment_factor
-optimize
+optimize Math
 case
 circle
 ab
 l_2
-euclidean
+euclidean Math
 norm
 structure
 moral_graph
@@ -614,12 +614,12 @@ contextmanager
 action
 cli
 translation
-matrix
-distribution
-alpha
-transform
+matrix Math
+distribution Math
+alpha Math
+transform Math
 response
-request_data
+request_data Web
 data
 raise_exception
 boolean
@@ -628,14 +628,14 @@ starting
 use
 s_t
 x_t
-optimization
+optimization Math
 smoothing
-inequality
+inequality Math
 sanity
-wikipedia
+wikipedia Web
 org
-wiki
-numpy
+wiki Web
+numpy Math
 update
 system
 masse
@@ -652,12 +652,12 @@ sql
 color
 kubernetes
 install
-train
+train ML
 survival
 score
-email
+email Web
 implement
-bot
+bot ML
 invitation
 availabe
 author
@@ -675,12 +675,12 @@ target
 account
 width
 si
-checksum
+checksum Math
 char
 vincenzo
 palazzo
 alias
-analysis
+analysis Math
 mean
 simrun
 cfg
@@ -703,12 +703,12 @@ elasticache
 redis
 ec2
 craft
-diameter
+diameter Math
 answer
 machine
-decryption
+decryption Math
 subscription
-firefox
+firefox Web
 profile
 aar
 bundle
@@ -718,17 +718,17 @@ add_argument
 stderr
 exit
 subclass
-predictor
+predictor ML
 sagemaker
 entity
 dtype
-scalar
+scalar Math
 l2
 core
 earley
 completer
 section
-radio
+radio Web
 input_tensor
 loss
 fetchrequest
@@ -745,21 +745,21 @@ paragraph
 indentation
 alignment
 ref
-enumeration
+enumeration Math
 leader
-calculate
-metric
-solve
-induction
-math
-finite
+calculate Math
+metric Math
+solve Math
+induction Math
+math Math
+finite Math
 horizon
-discrete
+discrete Math
 reward
-probability
+probability Math
 discount
-factor
-beta
+factor Math
+beta Math
 s_indice
 a_indice
 mask
@@ -781,11 +781,11 @@ initial
 conjunction
 cbc
 mode
-decrypt
+decrypt Math
 pad
 padmode
 bytes
-https
+https Web
 mp
 weixin
 wiki?id
@@ -793,11 +793,11 @@ parent
 latent
 xnew
 multiple
-fraction
-encoder
+fraction Math
+encoder Math
 mac
 openthread
-random
+random Math
 instrument
 qtpylib
 fetch
@@ -822,16 +822,16 @@ checkpoint
 pytorch
 sizer
 xmlrpc
-training
+training ML
 linearannealedpolicy
-nodejs
+nodejs Web
 crash
-lambda
+lambda Math
 underline
 acquire
 lock
 dvc
-imap
+imap ML
 window
 pixels
 bottleneck
@@ -849,7 +849,7 @@ notimplementederror
 wrapper
 wav
 term
-extraction
+extraction ML
 elasticsearch
 guide
 en
