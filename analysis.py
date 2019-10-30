@@ -11,7 +11,7 @@ docstring = 'Extracts video ID from URL, over running run ran PALAVRA.'
 
 
 #Define os arquivos de leitura
-arquivoEntrada = ["selecionados.txt"]
+arquivoEntrada = ["jsons.txt"]
 parsed_json = []
 
 #Definindo a linguagem de normalização
