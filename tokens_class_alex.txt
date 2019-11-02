@@ -1,5 +1,4 @@
-862 Math ML Web Graph Network DB // Mat IA Web BD CG Redes EngS SO Generico Remover
-
+862 Mat IA Web Grafos BD CG Redes EngS SO Generico Remover
 abundance 
 otu 
 function 
@@ -37,7 +36,7 @@ onstart
 parameter 
 property 
 indexparameter 
-tunnel Network
+tunnel Redes
 path 
 record 
 eventrecord 
@@ -182,7 +181,7 @@ vert
 node 
 assumption 
 modified 
-coordinate Math
+coordinate Mat
 order 
 iterator 
 timeserie 
@@ -230,7 +229,7 @@ logging
 log 
 message 
 timestamp 
-xml 
+xIA 
 description 
 signal 
 obex 
@@ -260,12 +259,12 @@ dutconsole
 maplayer CG
 mapsource CG
 mobac 
-saml 
+saIA 
 ticket 
 info 
 cas 
 false 
-proxy Network
+proxy Redes
 exploration 
 summary 
 definition 
@@ -312,7 +311,7 @@ event
 evaluate 
 reference 
 transmit 
-encode Math
+encode Mat
 eigenvalue 
 nodes 
 callback 
@@ -323,7 +322,7 @@ rboro
 entry 
 anrmnow 
 kind 
-pdu Network
+pdu Redes
 requeue 
 limit 
 post 
@@ -381,7 +380,7 @@ save_dir
 language 
 lang 
 result 
-panda Math
+panda Mat
 dataframe 
 business 
 detail 
@@ -467,7 +466,7 @@ execute
 git 
 func 
 queue 
-xmlcontent 
+xIAcontent 
 tika 
 shell 
 sigterm 
@@ -576,7 +575,7 @@ arg
 ninja 
 semver 
 loose 
-buildbot 
+builBDot 
 remotecommand 
 buildsteps 
 commandcomplete 
@@ -616,7 +615,7 @@ partfactory
 document 
 stop 
 |length| 
-paragraph 
+paraGrafos 
 indentation 
 alignment 
 ref 
@@ -678,7 +677,7 @@ scheduler
 checkpoint 
 pytorch 
 sizer 
-xmlrpc 
+xIArpc 
 linearannealedpolicy 
 crash 
 underline 
@@ -711,85 +710,85 @@ vim
 vm SO
 virtualdevicespec 
 controller 
-percentage Math
-number Math
-sequence Math
-calculation Math
-transformation Math
-proportion Math
-variance Math
-measurement Math
-axis Math
-variant Math
-mod Math
-statistic Math
-reorient_coordinate Math
-coord Math
-plot Math
-plotting Math
-hashing Math
-hash Math
-operation Math
-sum Math
-rate Math
-area Math
-meter Math
-polygon Math
-coefficient Math
-conversion Math
-distance Math
-measure Math
-convert Math
-velocity Math
-latitude Math
-longitude Math
-encryption Math
-encrypt Math
-second Math
-series Math
-optimize Math
-euclidean Math
-matrix Math
-distribution Math
-alpha Math
-transform Math
-optimization Math
-inequality Math
-numpy Math
-checksum Math
-analysis Math
-diameter Math
-decryption Math
-scalar Math
-enumeration Math
-calculate Math
-metric Math
-solve Math
-induction Math
-math Math
-finite Math
-discrete Math
-probability Math
-factor Math
-beta Math
-decrypt Math
-fraction Math
-encoder Math
-random Math
-lambda Math
-feature ML
-sampleid ML
-sample ML
-dataset ML
-correction ML
-decision ML
-estimator ML
-train ML
-bot ML
-predictor ML
-training ML
-imap ML
-extraction ML
+percentage Mat
+number Mat
+sequence Mat
+calculation Mat
+transformation Mat
+proportion Mat
+variance Mat
+measurement Mat
+axis Mat
+variant Mat
+mod Mat
+statistic Mat
+reorient_coordinate Mat
+coord Mat
+plot Mat
+plotting Mat
+hashing Mat
+hash Mat
+operation Mat
+sum Mat
+rate Mat
+area Mat
+meter Mat
+polygon Mat
+coefficient Mat
+conversion Mat
+distance Mat
+measure Mat
+convert Mat
+velocity Mat
+latitude Mat
+longitude Mat
+encryption Mat
+encrypt Mat
+second Mat
+series Mat
+optimize Mat
+euclidean Mat
+matrix Mat
+distribution Mat
+alpha Mat
+transform Mat
+optimization Mat
+inequality Mat
+numpy Mat
+checksum Mat
+analysis Mat
+diameter Mat
+decryption Mat
+scalar Mat
+enumeration Mat
+calculate Mat
+metric Mat
+solve Mat
+induction Mat
+math Mat
+finite Mat
+discrete Mat
+probability Mat
+factor Mat
+beta Mat
+decrypt Mat
+fraction Mat
+encoder Mat
+random Mat
+lambda Mat
+feature IA
+sampleid IA
+sample IA
+dataset IA
+correction IA
+decision IA
+estimator IA
+train IA
+bot IA
+predictor IA
+training IA
+imap IA
+extraction IA
 url Web
 form Web
 async_req Web
@@ -805,7 +804,7 @@ json Web
 service Web
 session Web
 password Web
-html Web
+htIA Web
 request Web
 login Web
 loginmanager Web
@@ -822,43 +821,43 @@ firefox Web
 radio Web
 https Web
 nodejs Web
-kruskal Graph
-tree Graph
-multitree Graph
-cluster Graph
-graph Graph
-structure Graph
-moral_graph Graph
-consume_network_packet_messages_from_redis Network
-end_point Network
-endpoint Network
-subnet Network
-removedomain Network
-domain Network
-connection Network
-ip Network
-stream Network
-link Network
-network Network
-adapter Network
-port Network
-package Network
-middleware Network
-address Network
-serverendpoint Network
-apache Network
-streaminglistener Network
-tablename DB
-table DB
-database DB
-query DB
-template DB
-model DB
-postgresql DB
-batch DB
-search DB
-sparql DB
-rdf DB
-transaction DB
-db DB
-graphqlschema DB
+kruskal Grafos
+tree Grafos
+multitree Grafos
+cluster Grafos
+Grafos Grafos
+structure Grafos
+moral_Grafos Grafos
+consume_Redes_packet_messages_from_redis Redes
+end_point Redes
+endpoint Redes
+subnet Redes
+removedomain Redes
+domain Redes
+connection Redes
+ip Redes
+stream Redes
+link Redes
+Redes Redes
+adapter Redes
+port Redes
+package Redes
+middleware Redes
+address Redes
+serverendpoint Redes
+apache Redes
+streaminglistener Redes
+tablename BD
+table BD
+database BD
+query BD
+template BD
+model BD
+postgresql BD
+batch BD
+search BD
+sparql BD
+rdf BD
+transaction BD
+BD BD
+Grafosqlschema BD
