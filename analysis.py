@@ -82,7 +82,7 @@ def splitLinhas(linhas):
     token_set['sc'] = []
     for x in range(1, len(split)):
         token_set[split[x]] = []
-        print(split[x])
+        #print(split[x])
     for x in range(1, len(linhas)):
         split = linhas[x].split()
         if(len(split) > 1):
@@ -108,21 +108,31 @@ def writeMapAsJsonToFile(arquivoSaida, map):
          o.write(json.dumps(map))
          o.close()
 
+def sortAndWriteToFile(arqSaida, linhas):
+    linhas.sort()
+    with open(arqSaida, 'w+') as o:
+        for l in linhas:
+            o.write(l + '\n')
+        o.close()
+
 
 #norma(docstring)
 
 #parseJson(arquivoEntrada, parsed_json)
 #docstring2 = []
 #for obj in parsed_json:
-#    processaTokens(obj["docstring_tokens"], tokens_proc)
+#processaTokens(obj["docstring_tokens"], tokens_proc)
 
 #print(tokens_proc)
 #print(len(tokens_proc))
 #escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
 
-linhas = lerTokensDeArquivo("tokens.txt")
-linha0, token_map = splitLinhas(linhas)
-writeMapAsLinestoFile("tokens.txt", token_map)
+#linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
+#writeToFile("sortedList.txt",linhas1)
+
+
+#linha0, token_map = splitLinhas(linhas1)
+#writeMapAsLinestoFile("arq.txt", token_map)
 #writeMapAsJsonToFile("tokens.json", token_map)
 
 
