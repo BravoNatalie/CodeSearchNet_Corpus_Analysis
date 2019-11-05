@@ -1,9 +1,9 @@
 804 Mat IA Web Grafos BD CG Redes EngS SO Generico Remover
 application Generico
 block Generico
-body Generico
+body Web
 boolean Generico
-bottleneck Generico
+bottleneck SO
 bug Generico
 build Generico
 buildbot Generico
@@ -727,8 +727,8 @@ linearannealedpolicy Remover
 abundance Remover
 account Remover
 acquire Remover
-action Remover
-addition Remover
+action Generico
+addition Generico
 agent Remover
 agentcount Remover
 all_caps_code Remover
@@ -759,7 +759,7 @@ ction Remover
 deal Remover
 docx Remover
 doesn Remover
-dot Remover
+dot Mat
 dtype Remover
 dut Remover
 dutconsole Remover

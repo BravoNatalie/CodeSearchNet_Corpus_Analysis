@@ -115,6 +115,37 @@ def sortAndWriteToFile(arqSaida, linhas):
             o.write(l + '\n')
         o.close()
 
+# conta as classificacoes diferentes
+def contarDiferencas(linhas_vet):
+    contDiferencas01 = 0
+    contDiferencas02 = 0
+    contDiferencas12 = 0
+    tokens_dict = {}
+    for i in range(0, len(linhas_vet)):
+        for l in range(1, len(linhas_vet[i])):
+            linha = linhas_vet[i][l]
+            split = linha.split()
+            if i == 0:
+                tokens_dict[split[0]] = []
+            if len(split) > 1:
+                tokens_dict[split[0]].append(split[1])
+            else:
+                print("Token sem classificacao: ", split[0])
+                tokens_dict[split[0]].append("sc")
+            
+    for k,v in tokens_dict.items():
+        if v[0] != v[1]:
+            contDiferencas01+=1
+        if v[0] != v[2]:
+            contDiferencas02+=1
+        if v[1] != v[2]:
+            contDiferencas12+=1
+    
+    print("Arqs 1 - 2: ", contDiferencas01)
+    print("Arqs 1 - 3: ", contDiferencas02)
+    print("Arqs 2 - 3: ", contDiferencas12)
+
+
 
 #norma(docstring)
 
@@ -127,7 +158,14 @@ def sortAndWriteToFile(arqSaida, linhas):
 #print(len(tokens_proc))
 #escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
 
-#linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
+linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
+linhas2 = lerTokensDeArquivo("paraClassificar.txt")
+linhas3 = lerTokensDeArquivo("tokens_class_alex2.txt")
+vector = []
+vector.append(linhas1)
+vector.append(linhas2)
+vector.append(linhas3)
+contarDiferencas(vector)
 #writeToFile("sortedList.txt",linhas1)
 
 
