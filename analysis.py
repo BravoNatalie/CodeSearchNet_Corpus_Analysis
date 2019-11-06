@@ -130,7 +130,7 @@ def contarDiferencas(linhas_vet):
             if len(split) > 1:
                 tokens_dict[split[0]].append(split[1])
             else:
-                print("Token sem classificacao: ", split[0])
+                #print("Token sem classificacao:", split[0])
                 tokens_dict[split[0]].append("sc")
             
     for k,v in tokens_dict.items():
@@ -140,12 +140,15 @@ def contarDiferencas(linhas_vet):
             contDiferencas02+=1
         if v[1] != v[2]:
             contDiferencas12+=1
-    
-    print("Arqs 1 - 2: ", contDiferencas01)
-    print("Arqs 1 - 3: ", contDiferencas02)
-    print("Arqs 2 - 3: ", contDiferencas12)
+    print("Total de diferencas:")
+    print("Entre Arqs 1 - 2:", contDiferencas01)
+    print("Entre Arqs 1 - 3:", contDiferencas02)
+    print("Entre Arqs 2 - 3:", contDiferencas12)
 
-
+def numeroDeTokensPorCategoria(linhas):
+    linha0, td = splitLinhas(linhas)
+    for k,v in td.items():
+        print(k, ":", len(v))
 
 #norma(docstring)
 
@@ -161,11 +164,16 @@ def contarDiferencas(linhas_vet):
 linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
 linhas2 = lerTokensDeArquivo("paraClassificar.txt")
 linhas3 = lerTokensDeArquivo("tokens_class_alex2.txt")
+
+numeroDeTokensPorCategoria(linhas1)
+
+# Conta total de diferentes
 vector = []
 vector.append(linhas1)
 vector.append(linhas2)
 vector.append(linhas3)
 contarDiferencas(vector)
+
 #writeToFile("sortedList.txt",linhas1)
 
 
