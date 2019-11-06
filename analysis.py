@@ -16,7 +16,7 @@ parsed_json = []
 
 #Definindo a linguagem de normalização
 # stemmer = SnowballStemmer('english')
-
+""" 
 nlp = spacy.load('en_core_web_sm')
 
 #adiciona stopwords customizadas
@@ -51,7 +51,7 @@ def processaTokens(docstring, tokens_proc):
         tk = tk.lower()
         if len(token) > 1 and token.is_stop==False and token.is_ascii and (token.pos_ == 'PROPN' or token.pos_ == 'NOUN') and tk not in tokens_proc:
             tokens_proc.append(tk)
-
+ """
 def parseJson(arquivoEntrada, parsed_json):
     for arq in arquivoEntrada:
         with open(arq) as f:
@@ -163,9 +163,9 @@ def numeroDeTokensPorCategoria(linhas):
 
 linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
 linhas2 = lerTokensDeArquivo("paraClassificar.txt")
-linhas3 = lerTokensDeArquivo("tokens_class_alex2.txt")
+linhas3 = lerTokensDeArquivo("tokens_class_natalie.txt")
 
-numeroDeTokensPorCategoria(linhas1)
+numeroDeTokensPorCategoria(linhas3)
 
 # Conta total de diferentes
 vector = []

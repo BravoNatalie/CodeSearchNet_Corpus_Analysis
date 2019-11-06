@@ -137,7 +137,7 @@ fusion Generico
 fv_selection Generico
 generate Generico
 generator Generico
-gitclienterror EngSO
+gitclienterror EngS
 group Generico
 guide Generico
 gutter Generico
@@ -232,13 +232,13 @@ multiple Generico
 name Generico
 namespace Generico
 ndarray Generico
-node Grafo
-nodes Grafo
+node Grafos
+nodes Grafos
 norm Mat
 note Generico
 obex Generico
 object Generico
-offset Rede
+offset Redes
 on_exit Generico
 onentry Generico
 onevent Generico
@@ -262,7 +262,7 @@ paragraph Generico
 param Generico
 parameter Generico
 parameters Generico
-parent Grafo
+parent Grafos
 parse Generico
 parses Generico
 partfactory Generico
@@ -367,8 +367,8 @@ setup Generico
 shape Generico
 shell Generico
 sigkill Generico
-sign Rede
-signal Rede
+sign Redes
+signal Redes
 signature Generico
 significance Generico
 signor Generico
@@ -575,7 +575,7 @@ dvc IA
 estimator IA
 extraction IA
 feature IA
-imap Rede
+imap Redes
 nifti Remover
 norvig Remover
 predictor IA
