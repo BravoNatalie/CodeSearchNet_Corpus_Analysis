@@ -108,8 +108,9 @@ def writeMapAsJsonToFile(arquivoSaida, map):
          o.write(json.dumps(map))
          o.close()
 
+#ordena os tokens em ordem alfabetica
 def sortAndWriteToFile(arqSaida, linhas):
-    linhas.sort()
+    linhas[1:len(linhas)] = sorted(linhas[1:len(linhas)]) # ordena apenas da linha 1 ao final
     with open(arqSaida, 'w+') as o:
         for l in linhas:
             o.write(l + '\n')
@@ -150,6 +151,53 @@ def numeroDeTokensPorCategoria(linhas):
     for k,v in td.items():
         print(k, ":", len(v))
 
+# cria listas com os tokens de cada categoria
+def separarTokensPorCategoria(tokens):
+    td = {}
+    infoTokens = tokens[0].split()
+    for i in range(1, len(infoTokens)):
+        #print(infoTokens[i])
+        td[infoTokens[i]] = []
+    for i in range(1, len(tokens)):
+        split = tokens[i].split()
+        td[split[1]].append(split[0])
+    return td
+# associa cada repositorio a tokens
+def classificarBase(arqBase, arqTokens):
+    tokens = lerTokensDeArquivo(arqTokens)
+    token_dict = separarTokensPorCategoria(tokens)
+    infoTokens = tokens[0].split()
+    classificacaoPorRepo = {} # chave = repo, valores = tokens
+    classificacaoPorFuncao = {} # chave = funcao, valores = tokens
+    classificacaoPorCategoria = {} # chave = categoria, valores = funcoes
+    for i in range(1, len(infoTokens)):
+        #print(infoTokens[i])
+        classificacaoPorCategoria[infoTokens[i]] = []
+    with open(arqBase, 'r') as r:
+        for line in r:
+            entrada = json.loads(line)
+            if entrada['repo'] not in classificacaoPorRepo:
+                #print(entrada['func_name'])
+                classificacaoPorRepo[entrada['repo']] = []
+            if entrada['func_name'] not in classificacaoPorFuncao:
+                classificacaoPorFuncao[entrada['func_name']] = []
+            else:
+                print("Erro, funcao duplicada ", entrada['func_name'])
+            #verificar tokens
+            for tk in entrada['docstring_tokens']:
+                if len(tk) > 1:
+                    tk = tk.lower()
+                    #print(tk)
+                    for k,v in token_dict.items():
+                        if tk in v:
+                            classificacaoPorRepo[entrada['repo']].append(k)
+                            classificacaoPorFuncao[entrada['func_name']].append(k)
+                            classificacaoPorCategoria[k].append(entrada['func_name'])
+        print("Por categoria: ", classificacaoPorCategoria)
+        print("Por funcao: ", classificacaoPorFuncao)
+        print("Por repo: ", classificacaoPorRepo)
+        r.close()
+
 #norma(docstring)
 
 #parseJson(arquivoEntrada, parsed_json)
@@ -161,18 +209,20 @@ def numeroDeTokensPorCategoria(linhas):
 #print(len(tokens_proc))
 #escreverTokensEmArquivo("tokens_processados.txt", tokens_proc)
 
-linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
-linhas2 = lerTokensDeArquivo("paraClassificar.txt")
-linhas3 = lerTokensDeArquivo("tokens_class_natalie.txt")
+classificarBase("jsons.txt", "tokens_class_alex.txt")
 
-numeroDeTokensPorCategoria(linhas3)
+#linhas1 = lerTokensDeArquivo("tokens_class_alex.txt")
+#linhas2 = lerTokensDeArquivo("paraClassificar.txt")
+#linhas3 = lerTokensDeArquivo("tokens_class_natalie.txt")
+
+#numeroDeTokensPorCategoria(linhas3)
 
 # Conta total de diferentes
-vector = []
-vector.append(linhas1)
-vector.append(linhas2)
-vector.append(linhas3)
-contarDiferencas(vector)
+#vector = []
+#vector.append(linhas1)
+#vector.append(linhas2)
+#vector.append(linhas3)
+#contarDiferencas(vector)
 
 #writeToFile("sortedList.txt",linhas1)
 
