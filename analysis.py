@@ -167,8 +167,8 @@ def classificarBase(arqBase, arqTokens):
     tokens = lerTokensDeArquivo(arqTokens)
     token_dict = separarTokensPorCategoria(tokens)
     infoTokens = tokens[0].split()
-    classificacaoPorRepo = {} # chave = repo, valores = tokens
-    classificacaoPorFuncao = {} # chave = funcao, valores = tokens
+    classificacaoPorRepo = {} # chave = repo, valores = categorias
+    classificacaoPorFuncao = {} # chave = funcao, valores = categorias
     classificacaoPorCategoria = {} # chave = categoria, valores = funcoes
     for i in range(1, len(infoTokens)):
         #print(infoTokens[i])
